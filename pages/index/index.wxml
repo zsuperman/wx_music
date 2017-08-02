@@ -1,0 +1,82 @@
+<!--index.wxml-->
+ 
+
+
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">哈哈</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">呵呵</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">嘿嘿</view>  
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 51}}px" bindchange="bindChange">  
+    <!-- 我是哈哈 -->  
+    
+    <swiper-item>   
+    <scroll-view class="" scroll-x scroll-y style="width: 100%;height:100%;">
+       <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item class="img">
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>   
+      <block  class="content"  wx:for="{{ddd}}" wx:for-item="item">
+        <view class="contName">
+         <image src="../../images/chat.png"></image>
+         <span>{{item.feed_source_name}}</span>
+        </view>
+        <view class="contTitle">
+         {{item.question}}
+        </view>
+        <view class="contt">
+        {{item.answer_ctnt}}
+        </view>
+        <view class="ccc"></view>
+      </block >
+      </scroll-view>
+    </swiper-item>  
+    <!-- 我是呵呵 -->  
+    <swiper-item>   
+      <view class="itemWeight" catchtap="jumpToOverMissionList">  
+          <view class="textStatus">跳转到新页面</view>   
+      </view>  
+    </swiper-item>  
+    <!-- 我是嘿嘿 -->  
+    <swiper-item>  
+       <scroll-view class="" scroll-x scroll-y style="width: 100%;height:100%;">
+            <view class="content">
+            <view class="left">
+              <block wx:for="{{note}}" wx:key="">
+                <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+              </block>
+            </view>
+            <view class="right">
+              <block wx:for="{{note}}" wx:key="">
+                <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+              </block>
+            </view>
+          </view> 
+        <!--  下面是一个模块 -->
+          <template name="item">
+            <view class="item">
+              <image class="item-img" src="{{url}}" mode="widthFix"></image>
+              <view class="item-title-box">
+                <navigator url="url" class="item-title">{{title}}</navigator> 
+                
+              </view>
+              <view class="name">
+                <image class="item-ava" src="{{avatar}}"></image>    
+                <text class="name-title">{{name}}</text>
+                <view class="heart_">
+                  
+                  <text>{{heart_num}}</text>
+                </view>
+              </view>
+            </view>
+          </template>
+       </scroll-view>
+    </swiper-item>  
+</swiper>  
+ 
+ 

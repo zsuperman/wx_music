@@ -1,0 +1,13 @@
+ 
+<view class="contain">
+  <view class="rank-list">
+    <block  wx:for="{{ranks}}"  wx:key="{{item.type}}">
+      <view class="rank-item">
+        <navigator url="/pages/music/music?type={{item.type}}" class="text">
+             {{item.text}}</navigator>
+        <view class="arrow"/>
+      </view>
+    </block>
+  </view>
+</view>
+ 

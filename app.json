@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/my/my",
+    "pages/music/music",
+    "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "凌哥",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/online.png",
+        "selectedIconPath": "images/online-s.png"
+      },
+      {
+        "text": "音乐",
+        "pagePath": "pages/list/list",
+        "iconPath": "images/music.png",
+        "selectedIconPath": "images/localmusic.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_focus.png"
+      }
+    ]
+  }
+}

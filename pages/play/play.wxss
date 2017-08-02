@@ -1,0 +1,37 @@
+/* pages/play/play.wxss */
+/*专辑封面图片*/
+.thumbnail image{
+    height: 300px;
+    width: 100%;
+}
+.conta{
+  background: #E4E4E4;
+  height: 100%;
+  padding-bottom:148rpx; 
+}
+/*音乐名称*/
+.title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+/*歌手名称*/
+.author{
+    text-align: center;
+    color: #555;
+}
+
+/*播放*/
+.action{
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+/*播放图标*/
+.action image{
+    width: 200rpx;
+    height: 200rpx;
+}

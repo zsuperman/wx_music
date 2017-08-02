@@ -1,0 +1,30 @@
+.rank-list {
+  width: 100%;
+}
+
+/*每一个分类*/
+.rank-item {
+  width: 100%;
+  text-align: left;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+/*分类文本*/
+.rank-item .text {
+  padding-left: 1rem;
+}
+
+/*分类名右侧的箭头图标*/
+.rank-item .arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  right: 20px;
+  transform: rotate(45deg);
+  top: 20px;
+}
